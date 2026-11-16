@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { contacts } from "../shared/contacts";
 import { useReveal } from "../shared/hooks";
-import { Playground } from "./Playground";
+import { Picker } from "./Picker";
 import { projects } from "./projects";
 
 const d = (ms: number) => ({ "--d": `${ms}ms` }) as React.CSSProperties;
@@ -82,34 +82,27 @@ export function App() {
 
       <main>
         <section className="hero wrap">
-          <div className="hero-text">
-            <span className="status rise" style={d(0)}>
-              <i /> Беру новые проекты
-            </span>
-            <h1 className="rise" style={d(80)}>
-              Клиент посчитал цену — <span className="mark">вам пришла заявка</span> в Telegram
-            </h1>
-            <p className="rise" style={d(180)}>
-              Делаю сайты для услуг и магазинов: калькуляторы, онлайн-запись, корзина. Попробуйте пример — он работает по-настоящему.
-            </p>
-            <div className="hero-cta rise" style={d(260)}>
-              <a className="tg-btn" href={contacts.telegramUrl} target="_blank" rel="noopener">
-                <TgIcon /> Обсудить сайт
-              </a>
-              <a className="ghost" href="#works">
-                Смотреть 5 работ ↓
-              </a>
-            </div>
+          <span className="status rise" style={d(0)}>
+            <i /> Беру новые проекты
+          </span>
+          <h1 className="rise" style={d(80)}>
+            Пока вы работаете, сайт <span className="mark">считает, записывает и&nbsp;продаёт</span>
+          </h1>
+          <div className="hero-sub rise" style={d(180)}>
+            <p>Сайты для малого бизнеса: калькулятор, онлайн-запись или корзина вместо «уточняйте по телефону».</p>
+            <a className="tg-btn" href={contacts.telegramUrl} target="_blank" rel="noopener">
+              <TgIcon /> Обсудить сайт
+            </a>
           </div>
-          <div className="rise" style={d(340)}>
-            <Playground />
+          <div className="rise" style={d(280)}>
+            <Picker />
           </div>
         </section>
 
         <section className="wrap section" id="works">
           <div className="head" data-reveal>
-            <h2>Откройте и потыкайте</h2>
-            <p>Всё кликается: считайте, записывайтесь, кладите в корзину.</p>
+            <h2>Все работы</h2>
+            <p>Демо живые: формы, корзина и календарь работают.</p>
           </div>
           <div className="works">
             {projects.map((p, i) => (
@@ -157,7 +150,7 @@ export function App() {
 
         <section className="wrap section">
           <div className="head" data-reveal>
-            <h2>Как работаем</h2>
+            <h2>От сообщения до запуска</h2>
           </div>
           <ol className="steps">
             {steps.map(([t, s], i) => (

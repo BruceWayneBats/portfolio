@@ -36,7 +36,7 @@ export function TgBubble({ m }: { m: TgMessage }) {
 export function TgChat({
   messages,
   typing = false,
-  name = "Бот заявок",
+  name = "Заявки с сайта",
   hint,
 }: {
   messages: TgMessage[];
