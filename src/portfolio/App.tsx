@@ -90,9 +90,6 @@ export function App() {
           </h1>
           <div className="hero-sub rise" style={d(180)}>
             <p>Сайты для малого бизнеса: калькулятор, онлайн-запись или корзина вместо «уточняйте по телефону».</p>
-            <a className="tg-btn" href={contacts.telegramUrl} target="_blank" rel="noopener">
-              <TgIcon /> Обсудить сайт
-            </a>
           </div>
           <div className="rise" style={d(280)}>
             <Picker />
